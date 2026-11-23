@@ -1,0 +1,12 @@
+/* Dot Field background — port từ back.txt (Kokonut UI, MIT). */
+.dotfield{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:auto;color:#5f7a56}
+.dotfield canvas{
+  -webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 50%,#000 40%,transparent 100%),radial-gradient(ellipse 34% 22% at 50% 50%,rgb(0 0 0 / .35),#000 100%);
+  mask-image:radial-gradient(ellipse 75% 70% at 50% 50%,#000 40%,transparent 100%),radial-gradient(ellipse 34% 22% at 50% 50%,rgb(0 0 0 / .35),#000 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
+.dotfield--warm{color:#a8764f}
+body:has(.dotfield) .dva-wrap,
+body:has(.dotfield) .gw-wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.dotfield canvas{opacity:.55!important}}
